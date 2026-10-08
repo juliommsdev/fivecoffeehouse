@@ -1,0 +1,395 @@
+@plugin 'tailwindcss-primeui';
+@layer tailwind, primeng;
+
+@layer tailwind {
+  @import "tailwindcss";
+}
+
+/* =============================
+   ☕ BASE GLOBAL fivecoffeehouse
+   Paleta: creme #f5eee6 / marrom #3a2c22 / verde #5ca870 / dourado #c9a24b
+============================= */
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background: #1c1b1a; /* marrom bem escuro, no lugar do preto puro */
+  color: #eaeaea;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(92, 168, 112, 0.6); /* verde da marca */
+  color: #fff;
+}
+
+/* =============================
+   🪟 EFEITOS DE VIDRO E GLOW
+============================= */
+.glass {
+  background: rgba(28, 27, 26, 0.6);
+  border: 1px solid rgba(92, 168, 112, 0.4);
+  box-shadow:
+    0 0 20px rgba(92, 168, 112, 0.3),
+    inset 0 0 12px rgba(201, 162, 75, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glow-green {
+  text-shadow: 0 0 10px rgba(92, 168, 112, 0.8);
+}
+.glow-gold {
+  text-shadow: 0 0 10px rgba(201, 162, 75, 0.8);
+}
+
+/* =============================
+   💬 TOOLTIP PRIME NG
+============================= */
+.p-tooltip {
+  background-color: rgba(28, 27, 26, 0.95) !important;
+  color: #f5eee6 !important;
+  border: 1px solid rgba(92, 168, 112, 0.6) !important;
+  border-radius: 8px !important;
+  padding: 0.6rem 0.9rem !important;
+  box-shadow: 0 0 10px rgba(92, 168, 112, 0.35) !important;
+  font-size: 0.875rem !important;
+  z-index: 9999 !important;
+}
+
+/* =============================
+   ✨ INPUTS E SELETORES
+============================= */
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+  background: rgba(245, 238, 230, 0.08);
+  border: 1px solid rgba(92, 168, 112, 0.4);
+  border-radius: 8px;
+  color: #f5eee6;
+  box-shadow: inset 0 0 12px rgba(201, 162, 75, 0.1);
+  transition: all 0.3s ease;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #5ca870;
+  box-shadow: 0 0 14px rgba(92, 168, 112, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #c9a24b;
+  box-shadow: 0 0 18px rgba(201, 162, 75, 0.4);
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* =============================
+   📦 CARDS E CONTAINERS
+============================= */
+.card {
+  background: rgba(28, 27, 26, 0.7);
+  border: 1px solid rgba(92, 168, 112, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(201, 162, 75, 0.08);
+  transition: all 0.4s ease;
+}
+.card:hover {
+  border-color: #5ca870;
+  box-shadow: 0 0 25px rgba(92, 168, 112, 0.4);
+}
+
+/* =============================
+   🔤 TIPOGRAFIA
+============================= */
+h1,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  /* cor removida daqui de propósito: cada seção define a própria cor
+     (creme em fundo escuro, marrom em fundo claro). Um color fixo global
+     brigava com as duas variações usadas no site. */
+}
+
+h1 span,
+h2 span {
+  color: #5ca870;
+}
+
+/* =============================
+   🌿 SCROLL PERSONALIZADO
+============================= */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5ca870 #1c1b1a;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5ca870, #c9a24b);
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(92, 168, 112, 0.6);
+}
+*::-webkit-scrollbar-track {
+  background: #1c1b1a;
+}
+
+/* =============================
+   🔘 PRIME NG ELEMENTOS
+============================= */
+.p-button {
+  background: linear-gradient(135deg, #5ca870, #c9a24b);
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+.p-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(92, 168, 112, 0.6);
+}
+
+/* =============================
+   🏁 FOOTER GERAL
+============================= */
+footer {
+  background: #17130f;
+  border-top: 2px solid #5ca870;
+  box-shadow: 0 -4px 20px rgba(92, 168, 112, 0.3);
+  color: #d9c4a7;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: #c9a24b;
+  transition: all 0.3s;
+}
+footer a:hover {
+  color: #5ca870;
+  text-shadow: 0 0 8px #5ca870;
+}
+
+.shiny-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #3a7a52 0%,
+    #5ca870 40%,
+    #ffffff 50%,
+    /* reflexo branco */ #5ca870 60%,
+    #3a7a52 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shine 8s linear infinite;
+}
+
+/* Container do dialog */
+.neon-dialog.p-dialog {
+  border-radius: 16px;
+  overflow: hidden; /* garante que o header arredondado apareça */
+  box-shadow: 0 0 25px rgba(201, 162, 75, 0.15);
+  border: 1px solid rgba(201, 162, 75, 0.35);
+  background: transparent; /* sem fundo extra */
+}
+
+/* Header padrão do PrimeNG (fica por trás do seu header custom) */
+.neon-dialog .p-dialog-header {
+  background: transparent !important; /* tira o branco */
+  border: 0 !important;
+  padding: 0 !important; /* remove o espaço extra */
+}
+
+/* Remove o botão de fechar padrão (por garantia adicional) */
+.neon-dialog .p-dialog-header .p-dialog-header-icon {
+  display: none !important;
+}
+
+/* Conteúdo do dialog com o mesmo tema */
+.neon-dialog-content.p-dialog-content {
+  background: linear-gradient(135deg, #1c1b1a 0%, #17130f 55%, #120f0c 100%);
+  color: #f5eee6;
+  padding: 20px;
+}
+
+/* Rodapé (se usar pTemplate="footer") */
+.neon-dialog .p-dialog-footer {
+  background: transparent;
+  border-top: 1px solid rgba(201, 162, 75, 0.25);
+}
+/* ===========================================
+   ❓ FAQ – Estilização GLOBAL do PrimeNG
+   =========================================== */
+
+/* PAINEL (cada card) */
+.p-accordion .p-accordionpanel {
+  background: #1c1b1a !important;
+  border: 1px solid #3f3f3f !important;
+  border-radius: 14px !important;
+  margin-bottom: 12px !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease !important;
+}
+
+/* PAINEL ativo */
+.p-accordion .p-accordionpanel.p-accordionpanel-active {
+  border-color: #5ca870 !important;
+  box-shadow: 0 0 0 1px #5ca870 !important;
+}
+
+/* HEADER (título da pergunta) */
+.p-accordion .p-accordionheader {
+  background: #1c1b1a !important;
+  padding: 0.6rem 1rem !important; /* FINO E ELEGANTE */
+  color: #f5eee6 !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+  border-radius: 14px !important;
+  transition: background 0.25s ease !important;
+}
+
+/* Hover */
+.p-accordion .p-accordionheader:hover {
+  background: #24211d !important;
+}
+
+/* Ícones (+ e –) */
+.p-accordion .p-accordionheader i {
+  font-size: 1.2rem !important;
+  color: #c9a24b !important;
+  transition: transform 0.25s ease !important;
+}
+
+/* WRAPPER interno do PrimeNG que cria espaço extra */
+.p-accordion .p-toggleable-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* CONTEÚDO ABERTO */
+.p-accordion .p-accordioncontent {
+  background: #17130f !important;
+  padding: 0 !important;
+  border-radius: 0 0 14px 14px !important;
+}
+
+/* Área interna onde o texto fica */
+.p-accordion .p-accordioncontent-content {
+  background: #120f0c !important; /* MAIS ESCURO */
+  border-radius: 0 0 14px 14px !important;
+}
+
+/* Texto da resposta */
+.p-accordion .p-accordioncontent p {
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+  color: #d9c4a7 !important;
+  line-height: 1.4rem !important;
+}
+
+/* Remove efeito ripple */
+.p-accordion .p-ripple::before {
+  display: none !important;
+}
+/* ===== DIALOG LIGHT (Creme, Marrom e Verde Suave) ===== */
+
+.vac-dialog.p-dialog {
+  border-radius: 18px;
+  overflow: hidden;
+  background: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Remove header padrão */
+.vac-dialog .p-dialog-header {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* ICONES PADRÃO */
+.vac-dialog .p-dialog-header .p-dialog-header-icon {
+  display: none !important;
+}
+
+/* ===== HEADER CUSTOM ===== */
+.vac-dialog-header {
+  background: #f5eee6;
+  border-bottom: 1px solid rgba(58, 44, 34, 0.12);
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3a2c22;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ícone de fechar */
+.dialog-close-btn {
+  color: #8b7b6a !important;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.dialog-close-btn:hover {
+  color: #3a2c22 !important;
+}
+
+/* ===== CONTEÚDO ===== */
+.vac-dialog-content.p-dialog-content {
+  background: #f5eee6 !important;
+  padding: 22px 26px;
+  color: #3a2c22 !important;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* TÍTULOS DE SEÇÃO */
+.vac-dialog-content h3 {
+  color: #5ca870 !important; /* verde da marca */
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+/* PARÁGRAFOS */
+.vac-dialog-content p {
+  color: #5c4b3b !important;
+}
+
+/* LISTAS */
+.vac-dialog-content ul li {
+  color: #5c4b3b !important;
+}
+
+/* FOOTER (se usar) */
+.vac-dialog .p-dialog-footer {
+  background: #fffaf3;
+  border-top: 1px solid rgba(58, 44, 34, 0.1);
+}

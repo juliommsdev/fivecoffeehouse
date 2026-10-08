@@ -1,0 +1,94 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "fivecoffeehouse": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/fivecoffeehouse",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "server": "src/main.server.ts",
+            "polyfills": [
+              "zone.js",
+              "src/window.global.fix.ts"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.css",
+              "primeicons/primeicons.css"
+            ],
+            "scripts": [],
+            "ssr": {
+              "entry": "src/server.ts"
+            },
+            "prerender": {
+              "discoverRoutes": false,
+              "routesFile": "routes.txt"
+            }
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/fivecoffeehouse/server",
+            "main": "src/server.ts",
+            "tsConfig": "tsconfig.app.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:prerender",
+          "options": {
+            "browserTarget": "fivecoffeehouse:build:production",
+            "serverTarget": "fivecoffeehouse:server:production",
+            "routesFile": "routes.txt"
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "fivecoffeehouse:build:production"
+            },
+            "development": {
+              "buildTarget": "fivecoffeehouse:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

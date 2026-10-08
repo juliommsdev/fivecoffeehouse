@@ -1,0 +1,80 @@
+<section
+  id="hero"
+  class="relative w-full min-h-screen flex overflow-hidden bg-gradient-to-b from-[#f5eee6] to-[#e6d1b8] text-[#3a2c22] flex-col-reverse lg:flex-row"
+>
+  <!-- CONTEÚDO -->
+  <div
+    class="relative z-10 w-full lg:w-1/2 min-h-screen flex flex-col justify-start lg:justify-center pt-20 sm:pt-24 lg:pt-0 px-6 sm:px-10 lg:px-24"
+  >
+    <span class="uppercase tracking-[0.35em] text-[#8b7b6a]">
+      five coffee house
+      <div class="mt-2 w-24 h-px bg-[#5ca870]/70"></div>
+    </span>
+
+    <h1
+      class="mt-6 text-4xl sm:text-5xl md:text-6xl leading-tight font-serif italic text-[#3a2c22]"
+    >
+      Mais que café,
+      <span class="font-bold !text-[#5ca870] block">
+        é um ritual diário
+      </span>
+    </h1>
+
+    <p
+      class="mt-8 text-base sm:text-lg max-w-xl leading-relaxed text-[#5c4b3b]"
+    >
+      Café preparado com calma, grãos selecionados e respeito ao tempo. Um
+      espaço criado para quem valoriza o simples, o artesanal e o momento.
+    </p>
+  </div>
+
+  <!-- IMAGEM -->
+  <div
+    class="relative w-full lg:w-1/2 flex items-center justify-center mt-6 lg:mt-0"
+  >
+    <!-- MOBILE (imagem redonda, com moldura decorativa) -->
+    <div class="w-full flex justify-center pt-6 pb-2 lg:hidden">
+      <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+        <!-- Glow suave atrás -->
+        <div
+          class="absolute inset-0 rounded-full bg-[#5ca870]/25 blur-2xl scale-110"
+        ></div>
+
+        <!-- Anel decorativo tracejado -->
+        <div
+          class="absolute -inset-3 rounded-full border border-dashed border-[#5ca870]/50"
+        ></div>
+
+        <!-- Foto -->
+        <div
+          class="relative w-full h-full rounded-full overflow-hidden border-4 border-[#fffaf3] shadow-xl"
+        >
+          <img
+            src="/assets/img/coffie_fly.png"
+            alt="Café sendo preparado"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Selo flutuante -->
+        <div
+          class="absolute -bottom-2 -right-2 bg-[#3a2c22] text-[#f5eee6] rounded-full w-20 h-20 flex flex-col items-center justify-center text-center shadow-lg border-2 border-[#5ca870]"
+        >
+          <span class="text-[10px] uppercase tracking-wide leading-none">100%</span>
+          <span class="text-[11px] font-serif font-semibold leading-tight mt-0.5">Gourmet</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESKTOP (imagem redonda) -->
+    <div
+      class="absolute -right-8 lg:-right-[200px] w-[400px] sm:w-[500px] lg:w-[1000px] h-[400px] sm:h-[500px] lg:h-[1000px] rounded-full overflow-hidden hidden lg:block"
+    >
+      <img
+        src="/assets/img/coffie_fly.png"
+        alt="Café sendo preparado"
+        class="w-full h-full object-cover shadow-lg"
+      />
+    </div>
+  </div>
+</section>

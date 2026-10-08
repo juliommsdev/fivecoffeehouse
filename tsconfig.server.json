@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/server",
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node"]
+  },
+  "include": ["src/main.server.ts", "src/server.ts", "src/**/*.ts"],
+  "exclude": [
+    "**/*.spec.ts",
+    "src/test.ts",
+    "src/main.ts",
+    "src/window.global.fix.ts",
+    "src/app/shared/splash-screen/splash-screen.component.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true
+  }
+}

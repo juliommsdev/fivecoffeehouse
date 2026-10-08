@@ -1,0 +1,10 @@
+<!-- NAVBAR -->
+<app-navbar
+  id="hero-navbar"
+  class="block w-full transition-all duration-300"
+  (changePage)="setPage($event)"
+></app-navbar>
+<app-one *ngIf="page === 'one'"></app-one>
+<app-two *ngIf="page === 'two'"></app-two>
+<app-three *ngIf="page === 'three'"></app-three>
+<app-footer></app-footer>

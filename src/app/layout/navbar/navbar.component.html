@@ -1,0 +1,100 @@
+<header
+  class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#2a2725]/90 via-[#3a2c22]/90 to-[#3a2c22]/95 backdrop-blur-sm border-b border-[#3a3228]/60 shadow-md z-50 transition-colors duration-300"
+>
+  <nav class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- LOGO -->
+    <div class="cursor-pointer flex items-center">
+      <img
+        src="/assets/img/five_logo.png"
+        alt="Five Coffee House"
+        class="h-10 sm:h-12 md:h-20 w-auto object-contain"
+      />
+    </div>
+
+    <!-- BOTÃO MOBILE (HAMBÚRGUER) -->
+    <button
+      class="lg:hidden text-[#f5eee6] text-2xl transition hover:text-[#5ca870]"
+      (click)="mobileOpen = !mobileOpen"
+    >
+      <i class="pi pi-bars"></i>
+    </button>
+
+    <!-- MENU DESKTOP -->
+    <ul class="hidden lg:flex items-center gap-8 text-sm font-medium">
+      <!-- Início / Sobre Nós -->
+      <li>
+        <button
+          (click)="goto('one')"
+          class="pb-2 px-4 py-1 rounded-md transition-all duration-300 border-b-2 border-transparent !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 flex items-center gap-2"
+          [ngClass]="{
+            'border-[#5ca870] !text-[#5ca870] bg-[#5ca870]/20 shadow-md scale-105':
+              current === 'one',
+          }"
+        >
+          <i class="pi pi-home !text-[#5ca870]"></i>
+          Início / Sobre Nós
+        </button>
+      </li>
+
+      <!-- Cardápio -->
+      <li>
+        <button
+          (click)="goto('two')"
+          class="pb-2 px-4 py-1 rounded-md transition-all duration-300 border-b-2 border-transparent !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 flex items-center gap-2"
+          [ngClass]="{
+            'border-[#5ca870] !text-[#5ca870] bg-[#5ca870]/20 shadow-md scale-105':
+              current === 'two',
+          }"
+        >
+          <i class="pi pi-book !text-[#5ca870]"></i>
+          Cardápio
+        </button>
+      </li>
+
+      <!-- Experiência / Cafeteria -->
+      <li>
+        <button
+          (click)="goto('three')"
+          class="pb-2 px-4 py-1 rounded-md transition-all duration-300 border-b-2 border-transparent !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 flex items-center gap-2"
+          [ngClass]="{
+            'border-[#5ca870] !text-[#5ca870] bg-[#5ca870]/20 shadow-md scale-105':
+              current === 'three',
+          }"
+        >
+          <i class="pi pi-star !text-[#5ca870]"></i>
+          Experiência / Cafeteria
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- MENU MOBILE DROPDOWN -->
+  <div
+    *ngIf="mobileOpen"
+    class="lg:hidden bg-gradient-to-r from-[#3a2c22]/90 via-[#5c4b3b]/90 to-[#d9c4a7]/90 border-t border-[#3a3228]/60 px-6 py-4 backdrop-blur-md space-y-4"
+  >
+    <button
+      (click)="goto('one'); mobileOpen = false"
+      class="w-full text-left px-4 py-2 rounded-md transition-all duration-300 !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 items-center gap-2"
+    >
+      <i class="pi pi-home !text-[#5ca870]"></i>
+      Início / Sobre Nós
+    </button>
+
+    <button
+      (click)="goto('two'); mobileOpen = false"
+      class="w-full text-left px-4 py-2 rounded-md transition-all duration-300 !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 flex items-center gap-2"
+    >
+      <i class="pi pi-book !text-[#5ca870]"></i>
+      Cardápio
+    </button>
+
+    <button
+      (click)="goto('three'); mobileOpen = false"
+      class="w-full text-left px-4 py-2 rounded-md transition-all duration-300 !text-[#f5eee6] hover:!text-[#fff] hover:bg-[#5ca870]/30 hover:shadow-lg hover:scale-105 flex items-center gap-2"
+    >
+      <i class="pi pi-star !text-[#5ca870]"></i>
+      Experiência / Cafeteria
+    </button>
+  </div>
+</header>

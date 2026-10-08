@@ -1,0 +1,92 @@
+<footer
+  class="relative z-10 py-16 px-8 overflow-hidden bg-black"
+>
+  <div
+    class="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12"
+  >
+    <!-- COLUNA ESQUERDA -->
+    <div class="space-y-6 text-left text-white">
+      <!-- LOGO -->
+      <img
+        src="/assets/img/five_logo.png"
+        class="h-32 opacity-90"
+        alt="Five Coffee House"
+      />
+
+      <p class="text-xs text-white max-w-sm leading-relaxed">
+        Five Coffee House — café especial, experiências únicas e momentos que
+        aquecem o dia. Cada xícara preparada com paixão e qualidade.
+      </p>
+
+      <div class="space-y-2 text-xs">
+        <div class="flex items-center gap-2 text-[#d9c4a7]">
+          <i class="pi pi-map-marker text-[#5ca870] !text-[12px]"></i>
+          <span>Espírito Santo — Brasil</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-[#d9c4a7]">
+          <i class="pi pi-phone text-[#5ca870] !text-[12px]"></i>
+          <span>+55 (28) 99999-0000</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-[#d9c4a7]">
+          <i class="pi pi-envelope text-[#5ca870] !text-[12px]"></i>
+          <span>contato&#64;fivecoffeehouse.com</span>
+        </div>
+
+        <div class="flex items-center gap-2 text-[#d9c4a7]">
+          <i class="pi pi-clock text-[#5ca870] !text-[12px]"></i>
+          <span>Todos os dias — 08:00 às 20:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLUNA DIREITA — MAPA -->
+    <div class="flex flex-col items-center w-full h-auto gap-3">
+      <div
+        class="w-full h-56 md:h-64 overflow-hidden rounded-lg border border-white/20"
+      >
+        <!-- Mapa -->
+        <iframe
+          src="https://www.google.com/maps?q=Esp%C3%ADrito+Santo,+Brasil&output=embed"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div
+    class="relative max-w-6xl mx-auto mt-12 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs text-white"
+  >
+    <span>
+      © 2026 Five Coffee House — Todos os direitos reservados. CNPJ:
+      <span class="text-[#5ca870] font-semibold">00.000.000/0001-00</span>
+    </span>
+
+    <div class="flex items-center gap-6 mt-4 md:mt-0">
+      <span
+        class="hover:text-[#5ca870] cursor-pointer transition"
+        (click)="showTerms = true"
+        >Termos de Uso</span
+      >
+      <span
+        class="hover:text-[#5ca870] cursor-pointer transition"
+        (click)="showPrivacy = true"
+        >Política de Privacidade</span
+      >
+
+      <a
+        href="https://instagram.com/fivecoffeehouse"
+        target="_blank"
+        class="text-white hover:text-[#5ca870] transition"
+        aria-label="Instagram"
+      >
+        <i class="pi pi-instagram text-xs !text-[#5ca870]"></i>
+      </a>
+    </div>
+  </div>
+</footer>
