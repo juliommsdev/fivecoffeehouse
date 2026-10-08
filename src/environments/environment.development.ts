@@ -9,18 +9,18 @@ export const environment = {
   cloudflare: {
     resumeWorkerUrl: '',
   },
-  siteName: 'VAC Implementação De Sistemas LDTA (Dev)',
+  siteName: 'Five Coffee House (Dev)',
   siteUrl: 'http://localhost:4200',
   siteLogo: '/assets/favicon.ico',
-  siteSlogan: 'Tecnologia que move sua produção',
+  siteSlogan: 'Café, sabor e momentos especiais',
 
   // 🧠 SEO
   seo: {
     description:
-      'A VAC, fundada em 2007, desenvolve soluções nacionais em automação industrial, hardware e software próprios, politrizes automatizadas e sistemas de controle com excelência técnica.',
+      'Five Coffee House — uma cafeteria criada para proporcionar experiências especiais através do café, bebidas e produtos selecionados.',
     keywords:
-      'automação industrial, soluções industriais, tecnologia industrial brasileira, politrizes automatizadas, sistemas de controle industrial, hardware industrial nacional, software industrial próprio, engenharia de automação, inovação tecnológica, automação para indústria, VAC Implementação de Sistemas, Valguimar Antonio Costalonga, suporte direto do fabricante, indústria 4.0 Brasil, equipamentos industriais brasileiros, desenvolvimento de hardware para automação, desenvolvimento de software industrial, automação para linha de produção, sistemas automatizados de alto desempenho, empresa de automação no Espírito Santo, soluções industriais customizadas, controle de processos industriais, integração de máquinas automatizadas',
-    author: 'Valguimar Antônio Costalonga',
+      'Five Coffee House, cafeteria, café, coffee house, cafés especiais, bebidas, cafeteria brasileira',
+    author: 'Five Coffee House',
   },
 
   links: {

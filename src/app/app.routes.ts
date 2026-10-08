@@ -4,7 +4,7 @@ import { LandingComponent } from './page/landing/landing.component';
 export const routes: Routes = [
   {
     path: '',
-    title: 'VAC Implementação De Sistemas LDTA | Seu site, sua conquista digital começa aqui',
+    title: 'Five Coffee House | Café, sabor e momentos especiais',
     component: LandingComponent,
   },
   {
